@@ -11,3 +11,6 @@ RelativeLayout
     B : A를 기준으로 A의 오른쪽
     C : D를 기준으로 D의 왼쪽
     A는 B의 왼쪽 B는 C의 왼쪽 C는 D의 왼쪽
+
+- relativelayout.xml
+- relativelayout_2.xml
