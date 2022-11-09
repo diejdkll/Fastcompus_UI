@@ -1,0 +1,6 @@
+06-과제
+
+과제
+- 화면은 9등분 해라
+
+- linearlayout_homework.xml
