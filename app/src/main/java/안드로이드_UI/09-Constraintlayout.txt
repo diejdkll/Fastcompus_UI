@@ -29,3 +29,13 @@ ConstraintLayout
     - 비율로 설정해준다
     - 1인경우 100% 치우친다
     - 0.5인경우 50% 치우친다 -> 변화 없음
+
+4> 비율로 설정하는 방법 -> LinearLayout Weight
+- layout_constrainHorizontal_weight
+- layout_constrainVertical_weight
+- 비율을 주려는 세로 또는 세로의 크기는 0dp로 해야한다
+
+5> 원형 위치 설정(Circular Positioning)
+- layout_constrainCircle : 기준을 정한다
+- layout_constrainCircleRadius : 두 중심간의 거리
+- layout_constrainCircleAngle : 각도
