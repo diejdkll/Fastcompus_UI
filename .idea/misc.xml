@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android UI/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android UI/app/src/main/res/layout/constraintlayout.xml" value="0.2484375" />
+        <entry key="..\:/Android UI/app/src/main/res/layout/constraintlayout_2.xml" value="0.1" />
+        <entry key="..\:/Android UI/app/src/main/res/layout/constraintlayout_3.xml" value="0.1" />
         <entry key="..\:/Android UI/app/src/main/res/layout/linearlayout.xml" value="0.152" />
         <entry key="..\:/Android UI/app/src/main/res/layout/margin_padding.xml" value="0.24947916666666667" />
         <entry key="..\:/Android UI/app/src/main/res/layout/relativelayout.xml" value="0.2" />
