@@ -6,12 +6,12 @@
 - Listner
     - 이벤트가 발생했을 때 수신하는 역할
 
-- xml에 존재는 하는 뷰를 activity로 가져오는 방법
+- xml에 존재하는 뷰를 activity로 가져오는 방법
     - findViewById
         - Id -> xml에서 부여한 view의 id
     - kotlinx
         - 귀찮은 findViewById과정을 생략가능 하다
         - deprecated 되었다
-            - 가급적으면 사용을 피해야한다
+            - 가급적이면 사용을 피해야한다
     - databinding
         - 뷰와 데이터를 묶는다
