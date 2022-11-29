@@ -15,3 +15,5 @@
             - 가급적이면 사용을 피해야한다
     - databinding
         - 뷰와 데이터를 묶는다
+
+- ViewControl_02
