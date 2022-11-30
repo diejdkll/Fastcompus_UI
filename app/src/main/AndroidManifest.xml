@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androidui">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidUI"
         tools:targetApi="31">
+        <activity
+            android:name=".ActivityOne"
+            android:exported="false" />
         <activity
             android:name=".ActivityThree"
             android:exported="false" />
@@ -41,12 +46,19 @@
             android:name=".TestActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityOne"
+            android:name=".Homework_2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
 
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <data
+                    android:host="*"
+                    android:scheme="http"/>
             </intent-filter>
         </activity>
     </application>
