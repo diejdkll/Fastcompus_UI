@@ -11,6 +11,8 @@
         <entry key="..\:/Android UI/app/src/main/res/drawable/nember_bg.xml" value="0.1015" />
         <entry key="..\:/Android UI/app/src/main/res/drawable/yellow_background.xml" value="0.125" />
         <entry key="..\:/Android UI/app/src/main/res/layout/activity_01.xml" value="0.20478837109876016" />
+        <entry key="..\:/Android UI/app/src/main/res/layout/activity_fragment.xml" value="0.20478837109876016" />
+        <entry key="..\:/Android UI/app/src/main/res/layout/activity_fragment_one.xml" value="0.20478837109876016" />
         <entry key="..\:/Android UI/app/src/main/res/layout/activity_homework1.xml" value="0.20478837109876016" />
         <entry key="..\:/Android UI/app/src/main/res/layout/activity_homework2.xml" value="0.176" />
         <entry key="..\:/Android UI/app/src/main/res/layout/activity_intent_one.xml" value="0.1388888888888889" />
@@ -31,6 +33,7 @@
         <entry key="..\:/Android UI/app/src/main/res/layout/constraintlayout_homework1.xml" value="0.2484375" />
         <entry key="..\:/Android UI/app/src/main/res/layout/constraintlayout_homework2.xml" value="0.2484375" />
         <entry key="..\:/Android UI/app/src/main/res/layout/drawable.xml" value="0.186328125" />
+        <entry key="..\:/Android UI/app/src/main/res/layout/first_fragment.xml" value="0.20478837109876016" />
         <entry key="..\:/Android UI/app/src/main/res/layout/framelayout.xml" value="0.20384615384615384" />
         <entry key="..\:/Android UI/app/src/main/res/layout/gravity.xml" value="0.2484375" />
         <entry key="..\:/Android UI/app/src/main/res/layout/homework_1.xml" value="0.2" />
