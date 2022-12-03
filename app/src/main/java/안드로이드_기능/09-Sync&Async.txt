@@ -1,0 +1,13 @@
+09-Sync&Async
+
+동기(sync) / 비동기(async)
+- 실행방법에 대한 종류
+- 순서대로 실행이 된다
+- 쓰레드와 다른 개념
+- 상황에 따라 선택(선택할 상황이 많진 않다)
+
+동기(sync)
+- Wait for response
+
+비동기(async)
+- Continue working -> Get response
