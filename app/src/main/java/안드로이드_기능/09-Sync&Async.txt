@@ -11,3 +11,5 @@
 
 비동기(async)
 - Continue working -> Get response
+
+- AsyncActivity
