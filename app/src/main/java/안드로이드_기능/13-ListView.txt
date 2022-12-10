@@ -18,3 +18,5 @@ Addview -> ListView -> RecyclerView
 - 단점
     - 비효율적이다 -> 데이터의 갯수만큼 inflate 해야한다
     - infalte는 비용이 비싸다 -> 휴대폰의 리소스를 많이 차지한다
+
+- ListViewActivity

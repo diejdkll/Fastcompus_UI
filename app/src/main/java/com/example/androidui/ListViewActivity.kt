@@ -1,4 +1,4 @@
-package com.example.fastcampus
+package com.example.androidui
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -36,11 +36,19 @@ class ListViewActivity : AppCompatActivity() {
             val nthCar = car.nthCar
             val nthEngine = car.nthEngine
 
+            // 토스트 메시지 사용 방법
             Toast.makeText(
                 this,
                 nthCar + "  " + nthEngine,
                 Toast.LENGTH_LONG
             ).show()
+        }
+        // 데이터 갱신 방
+        findViewById<TextView>(R.id.addCar).setOnClickListener {
+            adapter.carList.add(
+                Car("안녕 나는 차", "안녕 나는 엔진")
+            )
+            adapter.notifyDataSetChanged()
         }
     }
 }

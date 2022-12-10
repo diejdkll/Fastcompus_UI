@@ -5,18 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ListViewActivity">
-
-    <TextView
-        android:id="@+id/addCar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="자동차 추가"
-        android:textSize="30dp"
-        android:gravity="center"/>
-
-    <ListView
-        android:id="@+id/listView"
+    tools:context=".RecyclerViewActivity">
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

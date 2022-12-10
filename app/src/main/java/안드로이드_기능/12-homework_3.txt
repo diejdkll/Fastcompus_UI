@@ -7,3 +7,6 @@
 
 1. addview를 이용해서 리스트를 그리는 것 -> 충분히 고민
 2. 리스너를 다는 부분 -> 덜 충분히 고민
+
+- PhoneBookActivity
+- PhoneBookDetailActivity
