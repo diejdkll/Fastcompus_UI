@@ -1,5 +1,6 @@
 package com.example.androidui
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 class RecyclerViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +23,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         }
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         // 리사이클러뷰에 어답터 장착
+        recyclerView.adapter = RecyclerViewAdapter(carList, LayoutInflater.from(this), this)
         // 리사이클러뷰에 레이아웃 매니저 장착
-        recyclerView.adapter = RecyclerViewAdapter(carList, LayoutInflater.from(this))
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true)
 //        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 //        recyclerView.layoutManager = GridLayoutManager(this, 3)
@@ -37,10 +36,12 @@ class RecyclerViewActivity : AppCompatActivity() {
 class RecyclerViewAdapter(
     // outer class
     var carList: MutableList<Car>,
-    var inflater: LayoutInflater
+    var inflater: LayoutInflater,
+    val context: Context
 ) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         // inner class
         // 아이템 뷰의 상세 뷰 컴포넌트를 홀드한다
         val carImage: ImageView
@@ -51,6 +52,7 @@ class RecyclerViewAdapter(
             carImage = itemView.findViewById(R.id.carImage)
             nthCar = itemView.findViewById(R.id.nthCar)
             nthEngine = itemView.findViewById(R.id.nthEngine)
+            // 아이템 클릭 리스너
             itemView.setOnClickListener {
                 val position: Int = adapterPosition
                 val car = carList.get(position)
@@ -67,6 +69,9 @@ class RecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // 데이터를 아이템뷰의 뷰컴포넌트와 묶는다(뷰를 채워준다)
+        holder.carImage?.setImageDrawable(
+            context.resources.getDrawable(R.drawable.blue_background, context.theme)
+        )
         holder.nthCar.text = carList.get(position).nthCar
         holder.nthEngine.text = carList.get(position).nthEngine
     }
