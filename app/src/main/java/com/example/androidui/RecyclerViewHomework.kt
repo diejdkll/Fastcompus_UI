@@ -34,7 +34,7 @@ class RecyclerViewHomework : AppCompatActivity() {
     }
 }
 
-class Chat(val taxt: String, val if_My: Boolean) {
+class Chat(val text: String, val if_My: Boolean) {
 }
 
 class ChatRecyclerViewAdapter(
@@ -43,22 +43,48 @@ class ChatRecyclerViewAdapter(
     val context: Context
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView: TextView
+    inner class LeftViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val leftTextView: TextView
 
         init {
-            textView = itemView.findViewById(R.id.leftText)
+            leftTextView = itemView.findViewById(R.id.leftText)
+        }
+    }
+
+    inner class RightViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val rightTextView: TextView
+
+        init {
+            rightTextView = itemView.findViewById(R.id.rightText)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = inflater.inflate(R.layout.chat_item_left, parent, false)
-        return ViewHolder(view)
+        when(viewType) {
+            1 -> {
+                val view = inflater.inflate(R.layout.chat_item_right, parent, false)
+                return RightViewHolder(view)
+            }
+            else -> {
+                val view = inflater.inflate(R.layout.chat_item_left, parent, false)
+                return LeftViewHolder(view)
+            }
+        }
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        when(chatList.get(position).if_My){
+            true -> return 1
+            false -> return 0
+        }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val chat = chatList.get(position)
-        (holder as ViewHolder).textView.text = chat.taxt
+        when(chat.if_My){
+            true -> (holder as RightViewHolder).rightTextView.text = chat.text
+            false -> (holder as LeftViewHolder).leftTextView.text = chat.text
+        }
     }
 
     override fun getItemCount(): Int {
