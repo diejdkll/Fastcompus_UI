@@ -13,3 +13,4 @@ Adapter
 
 
 - TablayoutPagerActivity
+- TablayoutPagerNewActivity
