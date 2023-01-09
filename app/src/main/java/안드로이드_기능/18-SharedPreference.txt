@@ -12,3 +12,5 @@ SharedPreference
     - Read
     - Update
     - Delete
+
+- SharedPreferenceActivity
