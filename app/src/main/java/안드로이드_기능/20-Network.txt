@@ -39,3 +39,32 @@ Response(서버가 클라이언트에게 보내는 응답)
 Response Code
     - 응답의 요약
 Response
+
+JSON
+- {} 객체 표현
+- [] 배열 표현
+- 키-벨류
+
+- 문자열
+- 숫자 (정수, 소수)
+- 객체
+- 배열
+- 불린
+- 널
+
+Serializing (Serializer)
+- 꼬챙이로 객채를 담는다
+- 학생 객체 (이름, 번호, 나이)
+- 객체를 전송을 위한 데이터 포맷으로 바꿔준다
+
+클라이언트 ------> 시리얼라이징 ------> 서버
+
+HttpURLConnection
+- 안드로이드에서 기본으로 제공해주는 네트워크 모듈
+- 매우 번거롭다
+
+HttpURLConnection의 사용을 편하게 만들어준 라이브러리
+- Volley
+- Retrofit
+- OKHttp
+- 기타등등
