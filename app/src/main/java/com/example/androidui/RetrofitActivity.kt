@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.databinding.ActivityRetrofitBinding
@@ -34,8 +35,9 @@ class RetrofitActivity : AppCompatActivity() {
                 call: Call<ArrayList<StudentFromServer>>,
                 response: Response<ArrayList<StudentFromServer>>
             ) {
-                if(response.isSuccessful){
+                if (response.isSuccessful) {
                     val studentList = response.body()
+
                     findViewById<RecyclerView>(R.id.studentRecyclerview).apply {
                         this.adapter = StudentListRecyclerViewAdapter(
                             studentList!!,
@@ -43,10 +45,12 @@ class RetrofitActivity : AppCompatActivity() {
                         )
                         this.layoutManager = LinearLayoutManager(this@RetrofitActivity)
                     }
+
                 }
             }
 
             override fun onFailure(call: Call<ArrayList<StudentFromServer>>, t: Throwable) {
+                Toast.makeText(this@RetrofitActivity, "network failure :( inform the user and possibly retry", Toast.LENGTH_SHORT).show()
             }
         })
     }

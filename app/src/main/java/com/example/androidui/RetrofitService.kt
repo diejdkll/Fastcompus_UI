@@ -8,6 +8,6 @@ class StudentFromServer(
 )
 
 interface RetrofitService {
-    @GET("json/students")
+    @GET("/json/students/")
     fun getStudentList(): Call<ArrayList<StudentFromServer>>
 }
