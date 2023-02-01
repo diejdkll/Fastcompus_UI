@@ -53,6 +53,31 @@ class RetrofitActivity : AppCompatActivity() {
                 Toast.makeText(this@RetrofitActivity, "network failure :( inform the user and possibly retry", Toast.LENGTH_SHORT).show()
             }
         })
+
+        findViewById<TextView>(R.id.createStudent).setOnClickListener {
+            val student = HashMap<String, Any>()
+            student["name"] = "코카콜라"
+            student["intro"] = "펩시"
+            student["age"] = 100
+
+            retrofitService.createStudent(student).enqueue(object: Callback<StudentFromServer>{
+                override fun onResponse(
+                    call: Call<StudentFromServer>,
+                    response: Response<StudentFromServer>
+                ) {
+                    if(response.isSuccessful){
+                        val student = response.body()
+                        Log.d("testt", "등록한 학생 : "+student!!.name)
+                    }
+                }
+
+                override fun onFailure(call: Call<StudentFromServer>, t: Throwable) {
+                    Log.d("testt", "failure")
+                    Log.d("testt", t.message.toString())
+                }
+            })
+        }
+
     }
 }
 
