@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.databinding.ActivityRetrofitBinding
+import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -76,6 +77,26 @@ class RetrofitActivity : AppCompatActivity() {
                     Log.d("testt", t.message.toString())
                 }
             })
+        }
+
+        findViewById<TextView>(R.id.easyCreateStudent).setOnClickListener {
+            val student = StudentFromServer(name = "서울", age = 200, intro = "welcome to seoul")
+            retrofitService.easyCreateStudent(student)
+                .enqueue(object : Callback<StudentFromServer> {
+                    override fun onResponse(
+                        call: Call<StudentFromServer>,
+                        response: Response<StudentFromServer>
+                    ) {
+                        if (response.isSuccessful) {
+                            val student = response.body()
+                            Log.d("testt", "등록한 학생 : " + student!!.name)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<StudentFromServer>, t: Throwable) {
+                        Log.d("testt", "failure")
+                    }
+                })
         }
 
     }

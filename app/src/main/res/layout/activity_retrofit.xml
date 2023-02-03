@@ -10,13 +10,22 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/studentRecyclerview"
         android:layout_width="match_parent"
-        android:layout_height="620dp" />
+        android:layout_height="500dp" />
     
     <TextView
         android:id="@+id/createStudent"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="학생 생성"
+        android:gravity="center"
+        android:background="@drawable/blue_background"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/easyCreateStudent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="간단한 학생 생성"
         android:gravity="center"
         android:background="@drawable/blue_background"
         android:textSize="16dp"/>
