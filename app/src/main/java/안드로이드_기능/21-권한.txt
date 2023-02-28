@@ -12,3 +12,5 @@
 
 구글정책
 - API 버전에따라 다르다
+
+- PermissionActivity
